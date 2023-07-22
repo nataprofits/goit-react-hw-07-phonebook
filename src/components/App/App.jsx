@@ -1,9 +1,8 @@
 
-import { Title } from './App.styled';
+import { Title, Container, Div } from './App.styled';
 import ContactForm from '../ContactForm/ContactForm';
 import { ContactList } from '../ContactList/ContactList';
 import { Filter } from '../Filter/Filter';
-import { Layout } from '../Layout';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
@@ -18,13 +17,18 @@ export default function App() {
     dispatch(fetchContacts())
   },[dispatch])
   return (
-    <Layout>
-      <Title>Phonebook</Title>
-      <ContactForm />
-      <Title>Contacts</Title>
-      <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <ContactList />
-    </Layout>
+ 
+    <Container>
+    <Div>
+    <Title>Phonebook</Title>
+    <ContactForm />
+    </Div>
+    <div>
+    <Title>Contacts</Title>
+    <Filter />
+    {isLoading && !error && <b>Request in progress...</b>}
+    <ContactList />
+  </div>
+  </Container>
   );
 }
