@@ -23,12 +23,12 @@ export default function App() {
     <Title>Phonebook</Title>
     <ContactForm />
     </Div>
-    <div>
+    <Div>
     <Title>Contacts</Title>
     <Filter />
     {isLoading && !error && <b>Request in progress...</b>}
     <ContactList />
-  </div>
+  </Div>
   </Container>
   );
 }
