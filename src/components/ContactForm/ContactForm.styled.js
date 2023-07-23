@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -49,3 +50,5 @@ export const Button = styled.button`
     border-color: rgba(242, 255, 0, 0.8);
   }
 `;
+
+
