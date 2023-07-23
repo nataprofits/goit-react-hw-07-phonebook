@@ -8,6 +8,8 @@ export const Input = styled.input`
   border: 1px solid rgba(255, 115, 0, 0.8);
   border-radius: 5px;
   font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 export const Label = styled.label`
   display: flex;

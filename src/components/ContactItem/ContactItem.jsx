@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import { List,ListItem, Button } from './ContactItem.styled';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from '../../redux/operations';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from '../../redux/operations';
 
 export const ContactItem = ({ contact }) => {
+ 
   const dispatch = useDispatch();
+
   const handleDeleteContact = async () => {
     await dispatch(deleteContact(contact.id));
     dispatch(fetchContacts());
@@ -14,9 +16,10 @@ export const ContactItem = ({ contact }) => {
   return (
     <List>
       <ListItem key={contact.id}>
-        {contact.name}: {contact.number}
+        {contact.name} : {contact.phone} 
         <Button
-           onClick={handleDeleteContact}
+          onClick={handleDeleteContact}
+          
         >
           Delete
         </Button>
